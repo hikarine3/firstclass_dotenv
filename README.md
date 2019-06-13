@@ -25,9 +25,14 @@ if __name__ == "__main__":
 
 # How to test this module (This procedure is for developer of this module)
 
+## Update version
+vi setup.py
+
 ## Create distribution
+rm dist/*;
 python3 setup.py sdist bdist_wheel
 
+## Register if you haven't
 https://test.pypi.org/
 
 ## Upload to Test
