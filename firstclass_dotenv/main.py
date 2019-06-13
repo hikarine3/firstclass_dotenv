@@ -4,16 +4,13 @@ import re
 class Dotenv():
   def __init__(self, file=""):
     self.dotenv = ""
-    self.set_dotenv(file)
 
-  def setDotenv(self, file):
-    if file:
-      self.dotenv = file
-    else:
+  def load(self, file=""):
+    if file == "":
       self.dotenv = os.path.dirname(os.path.abspath(__file__)) + "/.env"
-    self.load_dotenv(self.dotenv)
+    else:
+      self.dotenv = file
 
-  def load(self, file):
     if os.path.exists(file):
       fh = open(file, "r")
       line = fh.readline()
