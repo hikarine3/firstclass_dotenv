@@ -22,7 +22,7 @@ if __name__ == "__main__":
   # print specified env value
   print(os.environ["TESTENVVALUE"])
 ```
-
+<!--
 # How to test this module (This procedure is for developer of this module)
 
 ## Update version
@@ -49,3 +49,4 @@ python -m twine upload --repository pypi dist/*
 
 ## Confirm on Page
 https://pypi.org/project/firstclass-dotenv/
+-->
