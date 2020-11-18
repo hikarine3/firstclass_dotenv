@@ -3,10 +3,9 @@ import re
 
 class Dotenv():
   def __init__(self, file=""):
+    self.dotenv = ""
     if file:
       self.dotenv = file
-    else:
-      self.dotenv = ""
 
   def load(self, file=""):
     if file:
