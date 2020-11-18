@@ -5,9 +5,9 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="firstclass_dotenv",
-    version="0.0.5",
+    version="0.0.6",
     author="Hajime Kurita",
-    author_email="support@1stclass.co.jp",
+#    author_email="support@1stclass.co.jp",
     description="Read value of .env(dotenv) into ENV values",
     long_description=long_description,
     long_description_content_type="text/markdown",

@@ -21,7 +21,7 @@ class Dotenv():
           line = line.strip()
           line = re.sub(r"\s*#.*", "", line)
           try:
-            (key, val) = line.split("=")
+            (key, val) = line.split("=", 1)
             if val:
               val = re.sub('^"|"$', "", val)
               os.environ[key] = val
