@@ -29,6 +29,11 @@ https://github.com/hikarine3/firstclass_dotenv
 <!--
 # How to test this module (This procedure is for developer of this module)
 
+## Preparation
+sudo pip install wheel;
+
+sudo pip install twine;
+
 ## Update version
 vi setup.py
 
