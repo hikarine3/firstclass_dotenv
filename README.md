@@ -38,7 +38,7 @@ sudo pip install twine;
 vi setup.py
 
 ## Create distribution
-rm dist/*;
+rm -f dist/*;
 python3 setup.py sdist bdist_wheel
 
 ## Register if you haven't
