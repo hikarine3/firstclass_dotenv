@@ -25,7 +25,7 @@ class Dotenv():
             (key, val) = line.split("=", 1)
             if val:
               val = re.sub('^"|"$', "", val)
-              os.environ[key] = val.trim()
+              os.environ[key] = val
             else:
               os.environ[key] = ""
           except:

@@ -45,16 +45,16 @@ python3 setup.py sdist bdist_wheel
 https://test.pypi.org/
 
 ## Upload to Test
-python -m twine upload --repository testpypi dist/*
+python3 -m twine upload --repository testpypi dist/*
 
 ## Confirm
 https://test.pypi.org/project/firstclass-dotenv/
 
 ## Confirm by intallation
-pip install -i https://test.pypi.org/simple/ firstclass-dotenv
+pip3 install -i https://test.pypi.org/simple/ firstclass-dotenv
 
 ## Deploy to production
-python -m twine upload --repository pypi dist/*
+python3 -m twine upload --repository pypi dist/*
 
 ## Confirm on Page
 https://pypi.org/project/firstclass-dotenv/

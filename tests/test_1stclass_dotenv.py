@@ -1,6 +1,7 @@
 import unittest
 import os
 from firstclass_dotenv import Dotenv
+from pprint import pprint 
 
 class Test1stclassDotenv(unittest.TestCase):
   def test_init(self):
@@ -20,6 +21,13 @@ class Test1stclassDotenv(unittest.TestCase):
     dotenv = Dotenv(os.path.dirname(os.path.abspath(__file__)) + "/.env.specified2")
     dotenv.load()
     assert os.environ["envfile"] == ".env.specified2", ".env.specified2 env file is missing"
+
+
+  def test_setDotenv_by_contructor2(self):
+    print("test setDotenv_by_contructor")
+    dotenv = Dotenv(os.path.dirname(os.path.abspath(__file__)) + "/.env.specified3")
+    dotenv.load()
+    assert os.environ["envfile"] == ".env.specified#3", ".env.specified3 env file is missing"
 
 if __name__ == "__main__":
   unittest.main()
