@@ -19,12 +19,13 @@ class Dotenv():
         line = fh.readline()
         while line:
           line = line.strip()
-          line = re.sub(r"\s*#.*", "", line)
+          line = re.sub(r"^#.*", "", line)
+          line = re.sub(r"\s#.*", "", line)
           try:
             (key, val) = line.split("=", 1)
             if val:
               val = re.sub('^"|"$', "", val)
-              os.environ[key] = val
+              os.environ[key] = val.trim()
             else:
               os.environ[key] = ""
           except:
